@@ -191,9 +191,17 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
     <circle r="3.4" fill="#ffffff"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#ppath"/></animateMotion></circle>
     
     <!-- GitHub Avatar -->
-    <g clip-path="url(#photoClip)">
-      <image x="144" y="204" width="136" height="168" href="Aquib195.jpg" preserveAspectRatio="xMidYMid slice"/>
-    </g>
+   <g clip-path="url(#photoClip)">
+  <image
+    x="144"
+    y="204"
+    width="136"
+    height="168"
+    href="https://raw.githubusercontent.com/AQUIB6544/My-Digital-Dashboard.svg/main/Aquib195.jpg"
+    xlink:href="https://raw.githubusercontent.com/AQUIB6544/My-Digital-Dashboard.svg/main/Aquib195.jpg"
+    preserveAspectRatio="xMidYMid slice"
+  />
+</g>
     
     <!-- smart chip -->
     <rect x="80" y="212" width="34" height="26" rx="5" fill="url(#chipG)"/>

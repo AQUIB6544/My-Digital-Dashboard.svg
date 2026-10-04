@@ -192,7 +192,7 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
     
     <!-- GitHub Avatar -->
     <g clip-path="url(#photoClip)">
-      <image x="144" y="204" width="136" height="168" href="https://github.com/Aquib195.jpg" preserveAspectRatio="xMidYMid slice"/>
+      <image x="144" y="204" width="136" height="168" href="Aquib195.jpg" preserveAspectRatio="xMidYMid slice"/>
     </g>
     
     <!-- smart chip -->

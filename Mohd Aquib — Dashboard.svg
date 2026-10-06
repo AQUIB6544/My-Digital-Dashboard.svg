@@ -3,30 +3,30 @@
 <desc>A swinging holographic ID badge beside a dashboard: repos, stars, forks, followers, most-starred projects, community reach and current focus.</desc>
 <defs>
 <style>
-@font-face{font-family:'SG';src:url(data:font/woff2;base64,d09GMgABAAAAABgUABAAAAAAPXAAABezAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGoE6G6h6HIEaBmA/U1RBVCoAgV4RCArCbLQsATYCJAODVAuBbAAEIAVMByAMBxsqNEVHaNg4AA[...]
-@font-face{font-family:'SGM';src:url(data:font/woff2;base64,d09GMgABAAAAABmEABAAAAAAPYQAABkkAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGoE6G6h6HIEaBmA/U1RBVCoAgV4RCArCfLRRATYCJAODVAuBbAAEIAVQByAMBxtTNEUHYsY4A[...]
-@font-face{font-family:'JBM';src:url(data:font/woff2;base64,d09GMgABAAAAABL4ABAAAAAAJfwAABKdAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGlIbIBwqBmA/U1RBVF4AgXYRCAq9YK8kATYCJAODOAuBXgAEIAVyByAMBxtGHLMi2DgABMkuB[...]
-@font-face{font-family:'JBMB';src:url(data:font/woff2;base64,d09GMgABAAAAABMwABAAAAAAJeQAABLUAAI2BAAAAAAAAAAAAAAAAAAAAAAAAAAAGlIbIBwqBmA/U1RBVEwAgXYRCAq9VK5HATYCJAODOAuBXgAEIAV6ByAMBxtfHKOijpNaSgD8[...]
-text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
-.sg{font-family:'SG','Segoe UI',Helvetica,Arial,sans-serif;font-weight:700}
-.sgm{font-family:'SGM','Segoe UI',Helvetica,Arial,sans-serif;font-weight:500}
-.jb{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
-.jbb{font-family:'JBMB',ui-monospace,Menlo,Consolas,monospace;font-weight:700}
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
-@keyframes ring{0%{r:4;opacity:.8}100%{r:13;opacity:0}}
-.fu{animation:fadeUp .7s cubic-bezier(.2,.8,.2,1) both}
-.fi{animation:fadeIn .7s ease both}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;transform:none!important}}
-.swing{transform-box:view-box;transform-origin:212px -30px;animation:drop 2.6s cubic-bezier(.3,1,.5,1) forwards, sway 6s ease-in-out 2.6s infinite}
-@keyframes drop{0%{transform:translateY(-640px) rotate(0deg)}22%{transform:translateY(0) rotate(0deg)}42%{transform:rotate(3.4deg)}62%{transform:rotate(-2.2deg)}80%{transform:rotate(1.2deg)}100%{t[...]
-@keyframes sway{0%,100%{transform:rotate(-1.9deg)}50%{transform:rotate(1.9deg)}}
-.foil{animation:foil 6s ease-in-out infinite}
-@keyframes foil{0%{transform:translateX(-320px)}55%,100%{transform:translateX(360px)}}
-.tile{animation:fadeUp .7s cubic-bezier(.2,.8,.2,1) both}
-.bar{transform-box:fill-box}
+    text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .sg { font-weight: 700; }
+    .sgm { font-weight: 500; }
+    .jb { font-family: 'Courier New', Consolas, Monaco, monospace; }
+    .jbb { font-family: 'Courier New', Consolas, Monaco, monospace; font-weight: 700; }
+    
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+    
+    .fu { animation: fadeUp .7s cubic-bezier(.2,.8,.2,1) both; }
+    .fi { animation: fadeIn .7s ease both; }
+    .tile { animation: fadeUp .7s cubic-bezier(.2,.8,.2,1) both; }
+    
+    .swing { transform-box: view-box; transform-origin: 212px -30px; animation: drop 2.6s cubic-bezier(.3,1,.5,1) forwards, sway 6s ease-in-out 2.6s infinite; }
+    @keyframes drop { 0% { transform: translateY(-640px) rotate(0deg); } 22% { transform: translateY(0) rotate(0deg); } 42% { transform: rotate(3.4deg); } 62% { transform: rotate(-2.2deg); } 80% { transform: rotate(1.2deg); } 100% { transform: rotate(0deg); } }
+    @keyframes sway { 0%, 100% { transform: rotate(-1.9deg); } 50% { transform: rotate(1.9deg); } }
+    
+    .foil { animation: foil 6s ease-in-out infinite; }
+    @keyframes foil { 0% { transform: translateX(-320px); } 55%, 100% { transform: translateX(360px); } }
+    
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; opacity: 1 !important; transform: none !important; } }
 </style>
+
 <linearGradient id="cardbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0c08"/><stop offset="1" stop-color="#050604"/></linearGradient>
 <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#556B2F"/><stop offset=".5" stop-color="#111111"/><stop offset="1" stop-color="#8FBC8F"/></linearGradient>
 <linearGradient id="strapG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2a3319"/><stop offset=".5" stop-color="#556b2f"/><stop offset="1" stop-color="#2a3319"/></linearGradient>
@@ -36,19 +36,22 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
   <stop offset=".5" stop-color="#556B2F" stop-opacity=".2"/><stop offset=".65" stop-color="#8FBC8F" stop-opacity=".15"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
 </linearGradient>
 <linearGradient id="ringG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#556B2F"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#556B2F"/></linearGradient>
-<linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d7dbe6"/><stop offset=".45" stop-color="#8c93a6"/><stop offset=".55" stop-color="#6b7280"/><stop offset="1" sto[...]
+<linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d7dbe6"/><stop offset=".45" stop-color="#8c93a6"/><stop offset=".55" stop-color="#6b7280"/><stop offset="1" stop-color="#aab1c2"/></linearGradient>
 <linearGradient id="chipG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6c27a"/><stop offset="1" stop-color="#d6a13a"/></linearGradient>
 <linearGradient id="barG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#556B2F"/><stop offset="1" stop-color="#8FBC8F"/></linearGradient>
+
 <pattern id="dots4" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="11" cy="11" r="1" fill="#1f2617"/></pattern>
 <clipPath id="idClip"><rect x="56" y="150" width="312" height="424" rx="22"/></clipPath>
 <clipPath id="photoClip"><rect x="144" y="204" width="136" height="168" rx="16"/></clipPath>
 <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000" flood-opacity=".55"/></filter>
 </defs>
 
+<!-- Background -->
 <rect width="1280" height="600" rx="24" fill="url(#cardbg)"/>
 <rect width="1280" height="600" rx="24" fill="url(#dots4)"/>
 <rect x=".75" y=".75" width="1278.5" height="598.5" rx="23.25" fill="none" stroke="url(#edge)" stroke-width="1.5"/>
 
+<!-- Header -->
 <g class="fu" style="animation-delay:.15s">
   <text class="jbb" x="420" y="54" font-size="12.5" fill="#8FBC8F" letter-spacing="2.2">// MOHDHAMMAD AQUIB DASHBOARD</text>
   <text class="sg" x="420" y="94" font-size="29" fill="#ffffff" letter-spacing="-.5">Profile at a glance</text>
@@ -62,48 +65,44 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
 <!-- Metric Tiles -->
 <g class="tile" style="animation-delay:0.7s">
   <rect x="420.0" y="126" width="194" height="96" rx="16" fill="#141810" stroke="#2a3319"/>
-  <g transform="translate(584.5,156)" color="#8FBC8F" style="color:#8FBC8F" opacity=".9"><path d="M-8-9h11l3 3h5v15h-19z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="roun[...]
-  <text class="sg" x="438.0" y="188" font-size="36" fill="#ffffff" opacity="0">0<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.4762;0.5810" dur="2.10s" begin="0s[...]
-  <text class="sg" x="438.0" y="188" font-size="36" fill="#ffffff" opacity="0">3<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.5810;0.6857" dur="2.10s" begin="0s[...]
-  <text class="sg" x="438.0" y="188" font-size="36" fill="#ffffff" opacity="0">7<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.6857;0.7905" dur="2.10s" begin="0s[...]
-  <text class="sg" x="438.0" y="188" font-size="36" fill="#ffffff" opacity="0">12<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.7905;0.8952" dur="2.10s" begin="0[...]
-  <text class="sg" x="438.0" y="188" font-size="36" fill="#ffffff" opacity="1">15<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.8952" dur="2.10s" begin="0s" fill="[...]
+  <text class="sg" x="438.0" y="188" font-size="36" fill="#ffffff" opacity="0">0<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.4762;0.5810" dur="2.10s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="438.0" y="188" font-size="36" fill="#ffffff" opacity="0">3<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.5810;0.6857" dur="2.10s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="438.0" y="188" font-size="36" fill="#ffffff" opacity="0">7<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.6857;0.7905" dur="2.10s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="438.0" y="188" font-size="36" fill="#ffffff" opacity="0">12<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.7905;0.8952" dur="2.10s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="438.0" y="188" font-size="36" fill="#ffffff" opacity="1">15<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.8952" dur="2.10s" begin="0s" fill="freeze"/></text>
   <text class="jb" x="438.0" y="208" font-size="10.5" fill="#a0a0a0" letter-spacing="1.6">PUBLIC REPOS</text>
   <rect x="438.0" y="140" width="22" height="3" rx="1.5" fill="#8FBC8F"/>
 </g>
 
 <g class="tile" style="animation-delay:0.7999999999999999s">
   <rect x="628.5" y="126" width="194" height="96" rx="16" fill="#141810" stroke="#2a3319"/>
-  <g transform="translate(793.0,156)" color="#BDB76B" style="color:#BDB76B" opacity=".9"><path d="M0-9l2.7 5.6 6.1.8-4.5 4.2 1.2 6L0 4.1-5.5 6.6l1.2-6-4.5-4.2 6.1-.8z" fill="none" stroke="currentC[...]
-  <text class="sg" x="646.5" y="188" font-size="36" fill="#ffffff" opacity="0">0<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.5045;0.6036" dur="2.22s" begin="0s[...]
-  <text class="sg" x="646.5" y="188" font-size="36" fill="#ffffff" opacity="0">11<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.6036;0.7027" dur="2.22s" begin="0[...]
-  <text class="sg" x="646.5" y="188" font-size="36" fill="#ffffff" opacity="0">23<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.7027;0.8018" dur="2.22s" begin="0[...]
-  <text class="sg" x="646.5" y="188" font-size="36" fill="#ffffff" opacity="0">37<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.8018;0.9009" dur="2.22s" begin="0[...]
-  <text class="sg" x="646.5" y="188" font-size="36" fill="#ffffff" opacity="1">10<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.9009" dur="2.22s" begin="0s" fill="[...]
+  <text class="sg" x="646.5" y="188" font-size="36" fill="#ffffff" opacity="0">0<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.5045;0.6036" dur="2.22s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="646.5" y="188" font-size="36" fill="#ffffff" opacity="0">11<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.6036;0.7027" dur="2.22s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="646.5" y="188" font-size="36" fill="#ffffff" opacity="0">23<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.7027;0.8018" dur="2.22s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="646.5" y="188" font-size="36" fill="#ffffff" opacity="0">37<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.8018;0.9009" dur="2.22s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="646.5" y="188" font-size="36" fill="#ffffff" opacity="1">10<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.9009" dur="2.22s" begin="0s" fill="freeze"/></text>
   <text class="jb" x="646.5" y="208" font-size="10.5" fill="#a0a0a0" letter-spacing="1.6">TOTAL STARS</text>
   <rect x="646.5" y="140" width="22" height="3" rx="1.5" fill="#BDB76B"/>
 </g>
 
 <g class="tile" style="animation-delay:0.8999999999999999s">
   <rect x="837.0" y="126" width="194" height="96" rx="16" fill="#141810" stroke="#2a3319"/>
-  <g transform="translate(1001.5,156)" color="#556B2F" style="color:#556B2F" opacity=".9"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="-6" cy="-6" r="3"/><circle cx="6" cy=[...]
-  <text class="sg" x="855.0" y="188" font-size="36" fill="#ffffff" opacity="0">0<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.5299;0.6239" dur="2.34s" begin="0s[...]
-  <text class="sg" x="855.0" y="188" font-size="36" fill="#ffffff" opacity="0">3<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.6239;0.7179" dur="2.34s" begin="0s[...]
-  <text class="sg" x="855.0" y="188" font-size="36" fill="#ffffff" opacity="0">7<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.7179;0.8120" dur="2.34s" begin="0s[...]
-  <text class="sg" x="855.0" y="188" font-size="36" fill="#ffffff" opacity="0">10<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.8120;0.9060" dur="2.34s" begin="0[...]
-  <text class="sg" x="855.0" y="188" font-size="36" fill="#ffffff" opacity="1">8<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.9060" dur="2.34s" begin="0s" fill="f[...]
+  <text class="sg" x="855.0" y="188" font-size="36" fill="#ffffff" opacity="0">0<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.5299;0.6239" dur="2.34s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="855.0" y="188" font-size="36" fill="#ffffff" opacity="0">3<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.6239;0.7179" dur="2.34s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="855.0" y="188" font-size="36" fill="#ffffff" opacity="0">7<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.7179;0.8120" dur="2.34s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="855.0" y="188" font-size="36" fill="#ffffff" opacity="0">10<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.8120;0.9060" dur="2.34s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="855.0" y="188" font-size="36" fill="#ffffff" opacity="1">8<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.9060" dur="2.34s" begin="0s" fill="freeze"/></text>
   <text class="jb" x="855.0" y="208" font-size="10.5" fill="#a0a0a0" letter-spacing="1.6">FORKS</text>
   <rect x="855.0" y="140" width="22" height="3" rx="1.5" fill="#556B2F"/>
 </g>
 
 <g class="tile" style="animation-delay:1.0s">
   <rect x="1045.5" y="126" width="194" height="96" rx="16" fill="#141810" stroke="#2a3319"/>
-  <g transform="translate(1210.0,156)" color="#ffffff" style="color:#ffffff" opacity=".9"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="0" cy="-4" r="4.5"/><path d="M-8 9a8 [...]
-  <text class="sg" x="1063.5" y="188" font-size="36" fill="#ffffff" opacity="0">0<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.5528;0.6423" dur="2.46s" begin="[...]
-  <text class="sg" x="1063.5" y="188" font-size="36" fill="#ffffff" opacity="0">8<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.6423;0.7317" dur="2.46s" begin="[...]
-  <text class="sg" x="1063.5" y="188" font-size="36" fill="#ffffff" opacity="0">16<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.7317;0.8211" dur="2.46s" begin=[...]
-  <text class="sg" x="1063.5" y="188" font-size="36" fill="#ffffff" opacity="0">24<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.8211;0.9106" dur="2.46s" begin=[...]
-  <text class="sg" x="1063.5" y="188" font-size="36" fill="#ffffff" opacity="1">20<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.9106" dur="2.46s" begin="0s" fill[...]
+  <text class="sg" x="1063.5" y="188" font-size="36" fill="#ffffff" opacity="0">0<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.5528;0.6423" dur="2.46s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="1063.5" y="188" font-size="36" fill="#ffffff" opacity="0">8<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.6423;0.7317" dur="2.46s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="1063.5" y="188" font-size="36" fill="#ffffff" opacity="0">16<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.7317;0.8211" dur="2.46s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="1063.5" y="188" font-size="36" fill="#ffffff" opacity="0">24<animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.8211;0.9106" dur="2.46s" begin="0s" fill="freeze"/></text>
+  <text class="sg" x="1063.5" y="188" font-size="36" fill="#ffffff" opacity="1">20<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.9106" dur="2.46s" begin="0s" fill="freeze"/></text>
   <text class="jb" x="1063.5" y="208" font-size="10.5" fill="#a0a0a0" letter-spacing="1.6">FOLLOWERS</text>
   <rect x="1063.5" y="140" width="22" height="3" rx="1.5" fill="#ffffff"/>
 </g>
@@ -115,28 +114,28 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
   
   <text class="jb" x="442" y="311" font-size="12" fill="#a0a0a0">Mediotic Platform</text>
   <rect x="592" y="300" width="210" height="14" rx="7" fill="#1c2116"/>
-  <rect x="592" y="300" width="210.0" height="14" rx="7" fill="url(#barG)"><animate attributeName="width" values="0;0;210.0" keyTimes="0;0.6087;1" dur="2.30s" begin="0s" fill="freeze" calcMode="s[...]
-  <text class="jbb" x="812" y="311" font-size="12" fill="#ffffff" opacity="1">25<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.8800" dur="2.50s" begin="0s" fill="[...]
+  <rect x="592" y="300" width="210.0" height="14" rx="7" fill="url(#barG)"><animate attributeName="width" values="0;0;210.0" keyTimes="0;0.6087;1" dur="2.30s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+  <text class="jbb" x="812" y="311" font-size="12" fill="#ffffff" opacity="1">25<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.8800" dur="2.50s" begin="0s" fill="freeze"/></text>
   
   <text class="jb" x="442" y="345" font-size="12" fill="#a0a0a0">AMF Modz</text>
   <rect x="592" y="334" width="210" height="14" rx="7" fill="#1c2116"/>
-  <rect x="592" y="334" width="151.2" height="14" rx="7" fill="url(#barG)"><animate attributeName="width" values="0;0;151.2" keyTimes="0;0.6281;1" dur="2.42s" begin="0s" fill="freeze" calcMode="s[...]
-  <text class="jbb" x="753" y="345" font-size="12" fill="#ffffff" opacity="1">18<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.8855" dur="2.62s" begin="0s" fill="[...]
+  <rect x="592" y="334" width="151.2" height="14" rx="7" fill="url(#barG)"><animate attributeName="width" values="0;0;151.2" keyTimes="0;0.6281;1" dur="2.42s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+  <text class="jbb" x="753" y="345" font-size="12" fill="#ffffff" opacity="1">18<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.8855" dur="2.62s" begin="0s" fill="freeze"/></text>
   
   <text class="jb" x="442" y="379" font-size="12" fill="#a0a0a0">Zakat Calculator</text>
   <rect x="592" y="368" width="210" height="14" rx="7" fill="#1c2116"/>
-  <rect x="592" y="368" width="100.8" height="14" rx="7" fill="url(#barG)"><animate attributeName="width" values="0;0;100.8" keyTimes="0;0.6457;1" dur="2.54s" begin="0s" fill="freeze" calcMode="s[...]
-  <text class="jbb" x="702" y="379" font-size="12" fill="#ffffff" opacity="1">12<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.8905" dur="2.74s" begin="0s" fill="[...]
+  <rect x="592" y="368" width="100.8" height="14" rx="7" fill="url(#barG)"><animate attributeName="width" values="0;0;100.8" keyTimes="0;0.6457;1" dur="2.54s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+  <text class="jbb" x="702" y="379" font-size="12" fill="#ffffff" opacity="1">12<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.8905" dur="2.74s" begin="0s" fill="freeze"/></text>
   
   <text class="jb" x="442" y="413" font-size="12" fill="#a0a0a0">Personal Portfolio</text>
   <rect x="592" y="402" width="210" height="14" rx="7" fill="#1c2116"/>
-  <rect x="592" y="402" width="67.2" height="14" rx="7" fill="url(#barG)"><animate attributeName="width" values="0;0;67.2" keyTimes="0;0.6617;1" dur="2.66s" begin="0s" fill="freeze" calcMode="spl[...]
-  <text class="jbb" x="669" y="413" font-size="12" fill="#ffffff" opacity="1">8<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.8951" dur="2.86s" begin="0s" fill="f[...]
+  <rect x="592" y="402" width="67.2" height="14" rx="7" fill="url(#barG)"><animate attributeName="width" values="0;0;67.2" keyTimes="0;0.6617;1" dur="2.66s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+  <text class="jbb" x="669" y="413" font-size="12" fill="#ffffff" opacity="1">8<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.8951" dur="2.86s" begin="0s" fill="freeze"/></text>
   
   <text class="jb" x="442" y="447" font-size="12" fill="#a0a0a0">NumPy Notes</text>
   <rect x="592" y="436" width="210" height="14" rx="7" fill="#1c2116"/>
-  <rect x="592" y="436" width="42.0" height="14" rx="7" fill="url(#barG)"><animate attributeName="width" values="0;0;42.0" keyTimes="0;0.6763;1" dur="2.78s" begin="0s" fill="freeze" calcMode="spl[...]
-  <text class="jbb" x="644" y="447" font-size="12" fill="#ffffff" opacity="1">5<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.8993" dur="2.98s" begin="0s" fill="f[...]
+  <rect x="592" y="436" width="42.0" height="14" rx="7" fill="url(#barG)"><animate attributeName="width" values="0;0;42.0" keyTimes="0;0.6763;1" dur="2.78s" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+  <text class="jbb" x="644" y="447" font-size="12" fill="#ffffff" opacity="1">5<animate attributeName="opacity" calcMode="discrete" values="0;1" keyTimes="0;0.8993" dur="2.98s" begin="0s" fill="freeze"/></text>
   
   <text class="jb" x="442" y="494" font-size="10" fill="#a0a0a0" opacity=".75">stars per repository &#183; web platforms</text>
 </g>
@@ -144,7 +143,6 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
 <!-- Community & Focus Section -->
 <g class="tile" style="animation-delay:1.25s">
   <rect x="914" y="240" width="304" height="146" rx="16" fill="#141810" stroke="#2a3319"/>
-  <g transform="translate(936,268) scale(.72)" style="color:#8FBC8F"><path fill="#8FBC8F" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3[...]
   <text class="jbb" x="962" y="274" font-size="11" fill="#a0a0a0" letter-spacing="1.6">COMMUNITY</text>
   <text class="sg" x="936" y="322" font-size="30" fill="#ffffff">500</text>
   <text class="jb" x="936" y="342" font-size="10.5" fill="#a0a0a0" letter-spacing="1.3">CONNECTIONS</text>
@@ -170,7 +168,7 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
 <g class="swing">
   <!-- strap -->
   <path d="M192 -40 L232 -40 L229 104 L195 104 Z" fill="url(#strapG)"/>
-  <text class="jbb" font-size="9" fill="#ffffff" fill-opacity=".85" letter-spacing="2.4" transform="translate(216,-30) rotate(90)">AQUIB.DATA ANALYTICS &#183; DATA ANALYTICS &#183; AQUIB.DEV</tex[...]
+  <text class="jbb" font-size="9" fill="#ffffff" fill-opacity=".85" letter-spacing="2.4" transform="translate(216,-30) rotate(90)">AQUIB.DATA ANALYTICS &#183; DATA ANALYTICS &#183; AQUIB.DEV</text>
   <rect x="186" y="102" width="52" height="24" rx="6" fill="url(#metal)"/>
   <rect x="200" y="108" width="24" height="7" rx="3.5" fill="#39405020"/>
   <circle cx="212" cy="140" r="13" fill="none" stroke="url(#metal)" stroke-width="5"/>
@@ -190,16 +188,9 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
     <path id="ppath" d="M140 220v136a20 20 0 0 0 20 20h104a20 20 0 0 0 20-20V70a20 20 0 0 0-20-20H160a20 20 0 0 0-20 20z" fill="none"/>
     <circle r="3.4" fill="#ffffff"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#ppath"/></animateMotion></circle>
     
-    <!-- GitHub Avatar - EMBEDDED AS BASE64 -->
+    <!-- GitHub Avatar -->
     <g clip-path="url(#photoClip)">
-      <image
-        x="144"
-        y="204"
-        width="136"
-        height="168"
-        href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAoAIgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWm5ybnJ2eoqOkpaanqKmqsrO0tba2uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWWp3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba2uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5/KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q=="
-        preserveAspectRatio="xMidYMid slice"
-      />
+      <image x="144" y="204" width="136" height="168" href="https://github.com/Aquib195.png" preserveAspectRatio="xMidYMid slice" />
     </g>
     
     <!-- smart chip -->
@@ -220,7 +211,7 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
     <text class="jb" x="222" y="492" font-size="9.5" fill="#a0a0a0" letter-spacing="1.6">SINCE</text><text class="sgm" x="222" y="508" font-size="13" fill="#ffffff">2023</text>
     
     <!-- barcode -->
-    <rect x="82.0" y="530" width="2.4" height="16" fill="#a0a0a0"/><rect x="86.8" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="90.6" y="530" width="1.4" height="16" fill="#a0a0a0"/><r[...]
+    <rect x="82.0" y="530" width="2.4" height="16" fill="#a0a0a0"/><rect x="86.8" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="90.6" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="93.6" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="97.4" y="530" width="3.6" height="16" fill="#a0a0a0"/><rect x="102.6" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="107.0" y="530" width="3.6" height="16" fill="#a0a0a0"/><rect x="112.2" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="115.2" y="530" width="3.6" height="16" fill="#a0a0a0"/><rect x="121.2" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="125.6" y="530" width="2.4" height="16" fill="#a0a0a0"/><rect x="130.4" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="134.2" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="138.0" y="530" width="2.4" height="16" fill="#a0a0a0"/><rect x="142.8" y="530" width="2.4" height="16" fill="#a0a0a0"/><rect x="146.8" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="151.2" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="155.6" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="160.0" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="163.0" y="530" width="2.4" height="16" fill="#a0a0a0"/><rect x="167.8" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="172.2" y="530" width="3.6" height="16" fill="#a0a0a0"/><rect x="178.2" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="181.2" y="530" width="3.6" height="16" fill="#a0a0a0"/><rect x="187.8" y="530" width="3.6" height="16" fill="#a0a0a0"/><rect x="194.4" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="197.4" y="530" width="3.6" height="16" fill="#a0a0a0"/><rect x="204.0" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="208.4" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="211.4" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="215.2" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="218.2" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="222.0" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="226.4" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="230.2" y="530" width="2.4" height="16" fill="#a0a0a0"/><rect x="235.0" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="239.4" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="242.4" y="530" width="3.6" height="16" fill="#a0a0a0"/><rect x="247.6" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="251.4" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="255.8" y="530" width="3.6" height="16" fill="#a0a0a0"/><rect x="261.0" y="530" width="2.4" height="16" fill="#a0a0a0"/><rect x="266.4" y="530" width="1.4" height="16" fill="#a0a0a0"/><rect x="270.2" y="530" width="3.6" height="16" fill="#a0a0a0"/>
     
     <text class="jb" x="344" y="564" font-size="9.5" fill="#a0a0a0" text-anchor="end">@Aquib6544</text>
     

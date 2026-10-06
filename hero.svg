@@ -10,33 +10,6 @@
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
         @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        
-        /* Floating "hiii" Animation */
-        @keyframes floatHi {
-            0%, 100% { transform: translateY(0px) rotate(-2deg); }
-            50% { transform: translateY(-8px) rotate(2deg); }
-        }
-        
-        /* Waving Hand Emoji Animation */
-        @keyframes wave-animation {
-            0% { transform: rotate(0deg); }
-            10% { transform: rotate(14deg); }
-            20% { transform: rotate(-8deg); }
-            30% { transform: rotate(14deg); }
-            40% { transform: rotate(-4deg); }
-            50% { transform: rotate(10deg); }
-            60% { transform: rotate(0deg); }
-            100% { transform: rotate(0deg); }
-        }
-
-        .wave {
-            display: inline-block;
-            transform-origin: 70% 70%;
-            animation: wave-animation 2.5s infinite;
-        }
-        .hi-text {
-            animation: floatHi 3s ease-in-out infinite;
-        }
 
         .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
         .animate-blink { animation: blink 1.5s steps(2, start) infinite; }
@@ -79,51 +52,59 @@
 <!-- ================= LEFT SECTION (TEXT & INFO) ================= -->
 
 <!-- Status Pill -->
-<g class="fade-up-1" transform="translate(60, 60)">
-    <rect width="150" height="28" rx="14" fill="#141a14" stroke="#556B2F" stroke-width="1.5" class="olive-glow"/>
-    <circle cx="16" cy="14" r="4" fill="#8FBC8F" class="animate-pulse"/>
-    <text x="32" y="18" class="text-base" font-size="10" font-weight="700" fill="#8FBC8F" letter-spacing="1">OPEN TO COLLAB</text>
+<g transform="translate(60, 60)">
+    <g class="fade-up-1">
+        <rect width="150" height="28" rx="14" fill="#141a14" stroke="#556B2F" stroke-width="1.5" class="olive-glow"/>
+        <circle cx="16" cy="14" r="4" fill="#8FBC8F" class="animate-pulse"/>
+        <text x="32" y="18" class="text-base" font-size="10" font-weight="700" fill="#8FBC8F" letter-spacing="1">OPEN TO COLLAB</text>
+    </g>
 </g>
 
 <!-- Greeting & Name -->
-<g class="fade-up-2" transform="translate(60, 130)">
-    <text x="0" y="0" class="text-base" font-size="24" font-weight="600" fill="#a0a0a0">Hi there, I'm</text>
-    <text x="0" y="45" class="text-base name-gradient" font-size="48" font-weight="800" letter-spacing="-1">Mohd Aquib</text>
+<g transform="translate(60, 130)">
+    <g class="fade-up-2">
+        <text x="0" y="0" class="text-base" font-size="24" font-weight="600" fill="#a0a0a0">Hi there, I'm</text>
+        <text x="0" y="45" class="text-base name-gradient" font-size="48" font-weight="800" letter-spacing="-1">Mohd Aquib</text>
+    </g>
 </g>
 
 <!-- Typing Effect Text & Description -->
-<g class="fade-up-3" transform="translate(60, 220)">
-    <text x="0" y="0" class="text-mono" font-size="20" font-weight="700" fill="#8FBC8F">&gt;</text>
-    <g transform="translate(20, 0)">
-        <text x="0" y="0" class="text-mono" font-size="20" font-weight="700" fill="#ffffff">Data Scientist &amp; Developer</text>
-        <text x="325" y="0" class="text-mono animate-blink" font-size="20" font-weight="700" fill="#8FBC8F">_</text>
+<g transform="translate(60, 220)">
+    <g class="fade-up-3">
+        <text x="0" y="0" class="text-mono" font-size="20" font-weight="700" fill="#8FBC8F">&gt;</text>
+        <g transform="translate(20, 0)">
+            <text x="0" y="0" class="text-mono" font-size="20" font-weight="700" fill="#ffffff">Data Scientist &amp; Developer</text>
+            <text x="325" y="0" class="text-mono animate-blink" font-size="20" font-weight="700" fill="#8FBC8F">_</text>
+        </g>
+        <text x="0" y="30" class="text-base" font-size="14" fill="#888888">Crafting scalable data models, insightful analytics,</text>
+        <text x="0" y="50" class="text-base" font-size="14" fill="#888888">and intelligent web applications using Python.</text>
     </g>
-    <text x="0" y="30" class="text-base" font-size="14" fill="#888888">Crafting scalable data models, insightful analytics,</text>
-    <text x="0" y="50" class="text-base" font-size="14" fill="#888888">and intelligent web applications using Python.</text>
 </g>
 
 <!-- Bottom Metrics (Location, Repos, Stars) -->
-<g class="fade-up-4" transform="translate(60, 320)">
-    <!-- Location -->
-    <g transform="translate(0, 0)">
-        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#556B2F" transform="scale(0.8) translate(-6, -4)"/>
-        <text x="20" y="10" class="text-base" font-size="13" font-weight="500" fill="#a0a0a0">Aligarh, India</text>
-    </g>
-    
-    <!-- Repositories -->
-    <g transform="translate(130, 0)">
-        <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z" fill="#556B2F" transform="scale(0.8) translate(-6, -4)"/>
-        <text x="24" y="10" class="text-base" font-size="13" font-weight="500" fill="#a0a0a0">15 repos</text>
-    </g>
+<g transform="translate(60, 320)">
+    <g class="fade-up-4">
+        <!-- Location -->
+        <g transform="translate(0, 0)">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#556B2F" transform="scale(0.8) translate(-6, -4)"/>
+            <text x="20" y="10" class="text-base" font-size="13" font-weight="500" fill="#a0a0a0">Aligarh, India</text>
+        </g>
+        
+        <!-- Repositories -->
+        <g transform="translate(130, 0)">
+            <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z" fill="#556B2F" transform="scale(0.8) translate(-6, -4)"/>
+            <text x="24" y="10" class="text-base" font-size="13" font-weight="500" fill="#a0a0a0">15 repos</text>
+        </g>
 
-    <!-- Stars -->
-    <g transform="translate(230, 0)">
-        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="#556B2F" transform="scale(0.8) translate(-6, -4)"/>
-        <text x="24" y="10" class="text-base" font-size="13" font-weight="500" fill="#a0a0a0">10 stars</text>
+        <!-- Stars -->
+        <g transform="translate(230, 0)">
+            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="#556B2F" transform="scale(0.8) translate(-6, -4)"/>
+            <text x="24" y="10" class="text-base" font-size="13" font-weight="500" fill="#a0a0a0">10 stars</text>
+        </g>
     </g>
 </g>
 
-<!-- ================= RIGHT SECTION (VIEWFINDER & AVATAR) ================= -->
+<!-- ================= RIGHT SECTION (VIEWFINDER & IMAGE) ================= -->
 <g transform="translate(560, 50)">
     
     <!-- Viewfinder Corners -->
@@ -132,21 +113,14 @@
     <path d="M 0 270 L 0 300 L 30 300" fill="none" stroke="#556B2F" stroke-width="2" opacity="0.8"/>
     <path d="M 400 270 L 400 300 L 370 300" fill="none" stroke="#556B2F" stroke-width="2" opacity="0.8"/>
 
-    <!-- Avatar Image -->
+    <!-- Professional Tech/Code Image -->
     <g transform="translate(70, 20)">
         <g clip-path="url(#avatarClip)">
             <rect width="260" height="260" fill="#141a14" />
-            <image x="0" y="0" width="260" height="260" href="https://github.com/Aquib195.png" preserveAspectRatio="xMidYMid slice"/>
+            <!-- High quality Unsplash placeholder suitable for developer -->
+            <image x="0" y="0" width="260" height="260" href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&amp;w=500&amp;auto=format&amp;fit=crop" preserveAspectRatio="xMidYMid slice"/>
         </g>
         <rect width="260" height="260" rx="20" fill="none" stroke="#556B2F" stroke-width="2" opacity="0.4"/>
-    </g>
-
-    <!-- Floating "hiii" with Waving Hand Emoji -->
-    <g transform="translate(250, 40)" class="hi-text">
-        <text x="0" y="0" font-family="system-ui, sans-serif" font-size="38" font-weight="bold" fill="#ffffff" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.5))">hiii</text>
-        <g transform="translate(70, 2)">
-            <text x="0" y="0" font-size="36" class="wave">👋</text>
-        </g>
     </g>
 
     <!-- REC Indicator -->
